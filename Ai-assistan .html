@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant - StudyMate AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>StudyMate AI</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#features">Features</a>
+        <a href="ai-assistant.html">AI Assistant</a>
+    </nav>
+</header>
+
+<section class="assistant">
+
+    <h2>AI Study Assistant</h2>
+
+    <p>Ask your study question below.</p>
+
+    <input
+        type="text"
+        id="question"
+        placeholder="Enter your question"
+    >
+
+    <button onclick="askAI()">Ask AI</button>
+
+    <div id="answer"></div>
+
+</section>
+
+<footer>
+    <p>© 2026 StudyMate AI | Web Development Project</p>
+</footer>
+
+
+<script>
+
+function askAI() {
+
+    let question = document.getElementById("question").value
+        .toLowerCase()
+        .trim();
+
+    let answer = document.getElementById("answer");
+
+
+    if (question === "") {
+
+        answer.innerHTML =
+            "<b>Please enter a question.</b>";
+
+        return;
+    }
+
+
+    /* HTML */
+
+    else if (question.includes("html")) {
+
+        answer.innerHTML =
+            "<h3>HTML</h3>" +
+
+            "<b>Definition:</b> HTML stands for HyperText Markup Language. " +
+            "It is used to create the structure of web pages.<br><br>" +
+
+            "<b>Explanation:</b> HTML uses tags and elements to organize " +
+            "text, images, links, tables, forms and other webpage content.<br><br>" +
+
+            "<b>Example:</b><br>" +
+            "&lt;h1&gt;Welcome to StudyMate AI&lt;/h1&gt;<br><br>" +
+
+            "<b>Key Points:</b><br>" +
+            "1. HTML creates webpage structure.<br>" +
+            "2. It uses tags and elements.<br>" +
+            "3. It works with CSS and JavaScript.";
+    }
+
+
+    /* CSS */
+
+    else if (question.includes("css")) {
+
+        answer.innerHTML =
+            "<h3>CSS</h3>" +
+
+            "<b>Definition:</b> CSS stands for Cascading Style Sheets. " +
+            "It is used to style and design web pages.<br><br>" +
+
+            "<b>Explanation:</b> CSS controls colours, fonts, spacing, " +
+            "sizes, layouts and the appearance of HTML elements.<br><br>" +
+
+            "<b>Example:</b><br>" +
+            "h1 { font-size: 30px; }<br><br>" +
+
+            "<b>Key Points:</b><br>" +
+            "1. CSS is used for webpage design.<br>" +
+            "2. It controls the appearance of elements.<br>" +
+            "3. CSS can be inline, internal or external.";
+    }
+
+
+    /* JavaScript */
+
+    else if (question.includes("javascript")) {
+
+        answer.innerHTML =
+            "<h3>JavaScript</h3>" +
+
+            "<b>Definition:</b> JavaScript is a programming language used " +
+            "to make web pages interactive and dynamic.<br><br>" +
+
+            "<b>Explanation:</b> JavaScript can handle events, change webpage " +
+            "content, validate forms and perform calculations.<br><br>" +
+
+            "<b>Example:</b><br>" +
+            "alert('Hello Student');<br><br>" +
+
+            "<b>Key Points:</b><br>" +
+            "1. JavaScript adds interactivity.<br>" +
+            "2. It can manipulate HTML and CSS.<br>" +
+            "3. It is commonly used in web development.";
+    }
+
+
+    /* Python */
+
+    else if (question.includes("python")) {
+
+        answer.innerHTML =
+            "<h3>Python</h3>" +
+
+            "<b>Definition:</b> Python is a high-level, interpreted and " +
+            "general-purpose programming language.<br><br>" +
+
+            "<b>Explanation:</b> Python has simple and readable syntax. " +
+            "It is used in web development, data science, artificial intelligence " +
+            "and automation.<br><br>" +
+
+            "<b>Example:</b><br>" +
+            "print('Hello World')<br><br>" +
+
+            "<b>Key Points:</b><br>" +
+            "1. Python is easy to learn.<br>" +
+            "2. It has simple and readable syntax.<br>" +
+            "3. It is widely used in many fields.";
+    }
+
+
+    /* C Programming */
+
+    else if (
+        question === "c" ||
+        question.includes("c programming") ||
+        question.includes("language c")
+    ) {
+
+        answer.innerHTML =
+            "<h3>C Programming</h3>" +
+
+            "<b>Definition:</b> C is a general-purpose procedural programming language.<br><br>" +
+
+            "<b>Explanation:</b> C provides variables, data types, operators, " +
+            "loops, functions, arrays, pointers and structures.<br><br>" +
+
+            "<b>Example:</b><br>" +
+            "#include &lt;stdio.h&gt;<br>" +
+            "int main() {<br>" +
+            "&nbsp;&nbsp;printf(\"Hello World\");<br>" +
+            "&nbsp;&nbsp;return 0;<br>" +
+            "}<br><br>" +
+
+            "<b>Key Points:</b><br>" +
+            "1. C is a procedural language.<br>" +
+            "2. It supports functions and arrays.<br>" +
+            "3. It is widely used for system programming.";
+    }
+
+
+    /* Java */
+
+    else if (question.includes("java")) {
+
+        answer.innerHTML =
+            "<h3>Java</h3>" +
+
+            "<b>Definition:</b> Java is a high-level, object-oriented programming language.<br><br>" +
+
+            "<b>Explanation:</b> Java programs run through the Java Virtual " +
+            "Machine (JVM), which helps programs run on different platforms.<br><br>" +
+
+            "<b>Example:</b><br>" +
+            "System.out.println(\"Hello World\");<br><br>" +
+
+            "<b>Key Points:</b><br>" +
+            "1. Java is object-oriented.<br>" +
+            "2. It uses JVM.<br>" +
+            "3. It supports platform-independent programming.";
+    }
+
+
+    /* Data Structure */
+
+    else if (question.includes("data structure")) {
+
+        answer.innerHTML =
+            "<h3>Data Structure</h3>" +
+
+            "<b>Definition:</b> A data structure is a way of organizing " +
+            "and storing data so that it can be accessed and processed efficiently.<br><br>" +
+
+            "<b>Explanation:</b> Data structures help programmers store and " +
+            "manage data according to the requirements of a problem.<br><br>" +
+
+            "<b>Examples:</b> Array, Stack, Queue, Linked List, Tree and Graph.<br><br>" +
+
+            "<b>Key Points:</b><br>" +
+            "1. Organizes data.<br>" +
+            "2. Makes data processing easier.<br>" +
+            "3. Can be linear or non-linear.";
+    }
+
+
+    /* Stack */
+
+    else if (question.includes("stack")) {
+
+        answer.innerHTML =
+            "<h3>Stack</h3>" +
+
+            "<b>Definition:</b> Stack is a linear data structure that follows " +
+            "the LIFO (Last In, First Out) principle.<br><br>" +
+
+            "<b>Explanation:</b> The element inserted last is removed first.<br><br>" +
+
+            "<b>Example:</b> A stack of plates is a real-life example of a stack.<br><br>" +
+
+            "<b>Operations:</b><br>" +
+            "1. Push - inserts an element.<br>" +
+            "2. Pop - removes an element.<br>" +
+            "3. Peek/Top - shows the top element.<br><br>" +
+
+            "<b>Key Point:</b> Stack follows LIFO.";
+    }
+
+
+    /* Queue */
+
+    else if (question.includes("queue")) {
+
+        answer.innerHTML =
+            "<h3>Queue</h3>" +
+
+            "<b>Definition:</b> Queue is a linear data structure that follows " +
+            "the FIFO (First In, First Out) principle.<br><br>" +
+
+            "<b>Explanation:</b> The element inserted first is removed first.<br><br>" +
+
+            "<b>Example:</b> People standing in a line are an example of a queue.<br><br>" +
+
+            "<b>Operations:</b><br>" +
+            "1. Enqueue - inserts an element.<br>" +
+            "2. Dequeue - removes an element.<br><br>" +
+
+            "<b>Key Point:</b> Queue follows FIFO.";
+    }
+
+
+    /* Array */
+
+    else if (question.includes("array")) {
+
+        answer.innerHTML =
+            "<h3>Array</h3>" +
+
+            "<b>Definition:</b> An array is a collection of elements of the " +
+            "same data type stored in contiguous memory locations.<br><br>" +
+
+            "<b>Explanation:</b> Array elements are accessed using an index. " +
+            "In most programming languages, the first index is 0.<br><br>" +
+
+            "<b>Example:</b><br>" +
+            "int a[5] = {10, 20, 30, 40, 50};<br><br>" +
+
+            "<b>Key Points:</b><br>" +
+            "1. Stores multiple values.<br>" +
+            "2. Elements are accessed using an index.<br>" +
+            "3. Usually stores the same data type.";
+    }
+
+
+    /* Algorithm */
+
+    else if (question.includes("algorithm")) {
+
+        answer.innerHTML =
+            "<h3>Algorithm</h3>" +
+
+            "<b>Definition:</b> An algorithm is a finite sequence of clear " +
+            "steps used to solve a particular problem.<br><br>" +
+
+            "<b>Explanation:</b> An algorithm provides a step-by-step procedure " +
+            "for obtaining the required result.<br><br>" +
+
+            "<b>Example:</b> Steps for finding the sum of two numbers:<br>" +
+            "1. Start.<br>" +
+            "2. Read two numbers.<br>" +
+            "3. Add the numbers.<br>" +
+            "4. Display the result.<br>" +
+            "5. Stop.<br><br>" +
+
+            "<b>Key Points:</b><br>" +
+            "Input, Output, Definiteness, Finiteness and Effectiveness.";
+    }
+
+
+    /* OOP */
+
+    else if (
+        question.includes("oops") ||
+        question.includes("object oriented programming")
+    ) {
+
+        answer.innerHTML =
+            "<h3>OOP</h3>" +
+
+            "<b>Definition:</b> Object-Oriented Programming is a programming " +
+            "approach based on classes and objects.<br><br>" +
+
+            "<b>Explanation:</b> OOP organizes programs using objects that " +
+            "contain data and methods.<br><br>" +
+
+            "<b>Example:</b> A Student class can have data such as name and " +
+            "roll number and methods such as display().<br><br>" +
+
+            "<b>Main Concepts:</b><br>" +
+            "1. Encapsulation<br>" +
+            "2. Inheritance<br>" +
+            "3. Polymorphism<br>" +
+            "4. Abstraction";
+    }
+
+
+    /* Default Answer */
+
+    else {
+
+        answer.innerHTML =
+            "<h3>StudyMate AI</h3>" +
+
+            "I don't have this topic in my current exam database.<br><br>" +
+
+            "<b>Try asking about:</b><br>" +
+            "Python, C, Java, HTML, CSS, JavaScript, Data Structure, " +
+            "Stack, Queue, Array, Algorithm or OOP.";
+    }
+
+}
+
+</script>
+
+</body>
+  </html>
